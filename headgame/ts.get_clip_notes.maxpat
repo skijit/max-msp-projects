@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 159.0, 279.0, 686.0, 610.0 ],
+		"rect" : [ 943.0, 314.0, 686.0, 610.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,6 +29,20 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 120.0, 287.0, 94.0, 20.0 ],
+					"text" : "route get_notes"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "jitter matrix of notes",
 					"comment" : "",
 					"hint" : "jitter matrix of notes",
@@ -36,7 +50,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 231.5, 517.0, 25.0, 25.0 ]
+					"patching_rect" : [ 231.5, 553.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -119,7 +133,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 100.5, 459.0, 71.0, 18.0 ],
+					"patching_rect" : [ 100.5, 495.0, 71.0, 18.0 ],
 					"text" : "Dump Matrix"
 				}
 
@@ -133,7 +147,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 369.25, 345.0, 194.0, 18.0 ],
+					"patching_rect" : [ 369.25, 381.0, 194.0, 18.0 ],
 					"text" : "Format of the returned MIDI Notes List:"
 				}
 
@@ -148,7 +162,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 340.75, 363.0, 276.0, 74.0 ],
+					"patching_rect" : [ 340.75, 399.0, 276.0, 74.0 ],
 					"text" : "notes <count>\nnote <pitch> <starttime> <duration> <velocity> <ismuted>\nnote <pitch> <starttime> <duration> <velocity> <ismuted>\nnote <pitch> <starttime> <duration> <velocity> <ismuted>\nnote <pitch> <starttime> <duration> <velocity> <ismuted>\ndone"
 				}
 
@@ -162,7 +176,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "clear" ],
-					"patching_rect" : [ 207.5, 323.0, 67.0, 18.0 ],
+					"patching_rect" : [ 207.5, 359.0, 67.0, 18.0 ],
 					"text" : "t 0 i clear"
 				}
 
@@ -174,7 +188,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 119.5, 442.0, 18.0, 18.0 ]
+					"patching_rect" : [ 119.5, 478.0, 18.0, 18.0 ]
 				}
 
 			}
@@ -187,7 +201,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 151.5, 395.0, 72.0, 16.0 ],
+					"patching_rect" : [ 151.5, 431.0, 72.0, 16.0 ],
 					"text" : "setcell $1 val"
 				}
 
@@ -201,7 +215,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 151.5, 419.0, 39.0, 18.0 ],
+					"patching_rect" : [ 151.5, 455.0, 39.0, 18.0 ],
 					"text" : "zl join"
 				}
 
@@ -215,7 +229,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 151.5, 371.0, 73.0, 18.0 ],
+					"patching_rect" : [ 151.5, 407.0, 73.0, 18.0 ],
 					"text" : "counter"
 				}
 
@@ -229,7 +243,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 151.5, 347.0, 38.5, 18.0 ],
+					"patching_rect" : [ 151.5, 383.0, 38.5, 18.0 ],
 					"text" : "t b l"
 				}
 
@@ -243,7 +257,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 231.5, 347.0, 71.0, 18.0 ],
+					"patching_rect" : [ 231.5, 383.0, 71.0, 18.0 ],
 					"text" : "prepend dim"
 				}
 
@@ -257,7 +271,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 231.5, 459.0, 104.0, 18.0 ],
+					"patching_rect" : [ 231.5, 495.0, 104.0, 18.0 ],
 					"text" : "jit.matrix 5 float64 1"
 				}
 
@@ -271,7 +285,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 119.5, 291.0, 115.0, 18.0 ],
+					"patching_rect" : [ 119.5, 327.0, 115.0, 18.0 ],
 					"text" : "route done note notes"
 				}
 
@@ -374,7 +388,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 49.0, 41.0, 25.0, 25.0 ]
 				}
 
@@ -427,7 +441,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-150", 0 ]
@@ -595,6 +609,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
