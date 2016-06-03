@@ -16,8 +16,9 @@ The primary data structure for all the state data is the dictionary.  Essentiall
 
 ## Usage
 - Conventions
-    - All 3 abstractions require a single argument which provides a name for their shared underlying dictionary.
+    - All 3 abstractions require a first argument which provides a name for their shared underlying dictionary.
         - This value should be the same for all 3 abstractions when you wish them to share a state, but you can create as many different state objects as you like.
+    - ```state.get``` and ```state.set``` can have their key names set dynamically (dynamically via an inlet or statically via their second argument (which takes precedence))
     - Call ```state.create``` before calling any associated instances of ```state.get``` or ```state.set```
 
 - state.create
@@ -35,15 +36,15 @@ The primary data structure for all the state data is the dictionary.  Essentiall
         - ```parentStateClone```: Returns a dictionary reference for the parent state's dictionary.  This can be piped in to a dict object to create an immediate clone of the data.        
         - ```initStateParentClone```: This refers to a nested dictionary that was cloned off the parent state's dictionary when the current state was created.  You can query this data using the nested syntax (e.g. ```initStateParentClone::patchName``` to get the parent scope's patchName property), but keep in mind that the data might not be up to date.  Presently, the best way to get current information on the parent scope is to use the ```parentStateClone``` property and generate a *current* cloned version.   
     - Inlets: *from l to r*
-        1. Hot, Required, Symbol: The key/name of the property whose value will be returned.
+        1. Hot, Optional, Symbol: The key/name of the property whose value will be returned.  This value can also be specified statically as the second argument.  In this case, only a bang need be set in this inlet to trigger the evaluation.
     - Outlets:
         1. The corresponding value, which could be of any type.
 
 - state.set
     - Sets the corresponding key/values into the associated state dictionary object.
     - Inlets: *from l to r*
-        1. Hot, Required, Symbol: The key (i.e. property) to set
-        2. Hot, Required, Anything: The value corresponding to the key which should be set.
+        1. Hot, Required, Anything: The value corresponding to the key which should be set.
+        2. Hot, Optional, Symbol: The key (i.e. property) to set.  Alternately, this value can be set statically via the object's second argument (this method takes precedence).
     - Outlets: **None**
     
 ## Examples:
