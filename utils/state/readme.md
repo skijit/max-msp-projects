@@ -46,7 +46,28 @@ The primary data structure for all the state data is the dictionary.  Essentiall
         1. Hot, Required, Anything: The value corresponding to the key which should be set.
         2. Hot, Optional, Symbol: The key (i.e. property) to set.  Alternately, this value can be set statically via the object's second argument (this method takes precedence).
     - Outlets: **None**
-    
+
+- state.prop
+    - arguments:
+        1. name of state [REQUIRED]
+        2. prop name to wrap [OPTIONAL]
+            - if this argument is set, this instance ignore the property you pass in to it's leftmost inlet.  
+    - Inlets: 
+        1. [HOT, OPTIONAL, SYMBOL OR BANG] For getting: The key/name of the property whose value will be returned.  If this value is specified statically (via argument), then this inlet's value will be ignored.  In this case, you can just as well pass in a BANG to trigger the evaluation.
+        2. [HOT, OPTIONAL, ANYTHING] For setting: The value corresponding to the key (inlet 3 or argument 2) which should be set.  Passing this value triggers the setting.
+        3. [COLD, OPTIONAL, SYMBOL] For setting: The key/name of the property to get.  If this value is specified statically (via argument), then this inlet's value will be ignored.
+        4. [HOT, OPTIONAL, Message] 
+    - Outlets:
+        1. The value which has been gotten.  For set operations, there is no ouput.
+        2. Message Output.
+    - Messages:
+        - ```get <propName>```: propName is ignored if argument 2 is specified.  output format is "propName value"
+        - ```set <propName> <value>```: propName is ignored if argument 2 is specified.  No output.
+        - ```getDictName```: returns the state dictionary name as "dictionary XYZ" 
+
+**TODO: Note limitations on setting nested dictionaries as values**
+**TODO: Test setting lists as values**
+   
 ## Examples:
 - See the test/stateDriver.maxpat for examples and demonstrations 
     
