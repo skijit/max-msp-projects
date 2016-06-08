@@ -59,8 +59,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 582.0, 72.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 582.0, 72.0, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "set"
 				}
 
 			}
@@ -216,7 +217,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 97.0, 31.0, 22.0 ],
+					"patching_rect" : [ 36.0, 97.0, 95.0, 22.0 ],
 					"style" : "",
 					"text" : "#1"
 				}
@@ -358,7 +359,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 699.0, 670.0, 181.0, 22.0 ],
+					"patching_rect" : [ 699.0, 670.0, 205.0, 22.0 ],
 					"style" : "",
 					"text" : "#1_state created with..."
 				}
@@ -448,7 +449,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 554.5, 670.0, 125.0, 22.0 ],
+					"patching_rect" : [ 554.5, 670.0, 149.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -575,7 +576,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 667.0, 508.0, 125.0, 22.0 ],
+					"patching_rect" : [ 667.0, 508.0, 149.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0
@@ -736,7 +737,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 36.0, 56.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -1188,7 +1189,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 1 ],
+					"destination" : [ "obj-41", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-46", 0 ]
@@ -1277,8 +1278,6 @@
 
 			}
  ],
-		"dependency_cache" : [  ],
-		"autosave" : 0,
 		"default_bgcolor" : [ 0.223529, 0.164706, 0.254902, 1.0 ],
 		"color" : [ 0.976471, 0.909804, 0.792157, 1.0 ],
 		"elementcolor" : [ 0.486275, 0.552941, 0.584314, 1.0 ],
