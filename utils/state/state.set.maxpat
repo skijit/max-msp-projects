@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 931.0, 86.0, 614.0, 780.0 ],
+		"rect" : [ -1229.0, 198.0, 614.0, 780.0 ],
 		"bgcolor" : [ 0.572549, 0.47451, 0.447059, 1.0 ],
 		"editing_bgcolor" : [ 0.572549, 0.47451, 0.447059, 1.0 ],
 		"bglocked" : 0,
@@ -436,20 +436,22 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[COLD, OPTIONAL] Key Name",
+					"hint" : "[COLD, OPTIONAL] Key Name",
 					"id" : "obj-2",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 411.0, 56.0, 30.0, 30.0 ],
+					"patching_rect" : [ 410.0, 56.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[HOT, REQUIRED] Value",
+					"hint" : "[HOT, REQUIRED] Value to set",
 					"id" : "obj-1",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -605,7 +607,7 @@
 					"destination" : [ "obj-46", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 420.5, 294.0, 158.5, 294.0 ],
+					"midpoints" : [ 419.5, 294.0, 158.5, 294.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 

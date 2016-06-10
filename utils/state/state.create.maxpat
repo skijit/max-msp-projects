@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 68.0, 98.0, 1389.0, 816.0 ],
+		"rect" : [ -1246.0, 116.0, 1212.0, 907.0 ],
 		"bgcolor" : [ 0.572549, 0.47451, 0.447059, 1.0 ],
 		"editing_bgcolor" : [ 0.572549, 0.47451, 0.447059, 1.0 ],
 		"bglocked" : 0,
@@ -141,15 +141,16 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1162.333374, 26.0, 228.0, 33.0 ],
+					"patching_rect" : [ 1162.333374, 26.0, 228.0, 47.0 ],
 					"style" : "",
-					"text" : "[COLD, OPTIONAL] dictionary <anme> with values to copy \n"
+					"text" : "[COLD, OPTIONAL] dictionary <name> with values to copy \n"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[COLD, OPTIONAL] dictionary with values to copy  ",
+					"hint" : "[COLD, OPTIONAL] dictionary with values to copy  ",
 					"id" : "obj-23",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -654,7 +655,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[COLD, OPTIONAL] Parent Dict Name",
+					"hint" : "[COLD, OPTIONAL] Parent Dict Name",
 					"id" : "obj-4",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -706,7 +708,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[COLD, OPTIONAL] Override Parent Debug value (0, 1)",
+					"hint" : "[COLD, OPTIONAL] Override Parent Debug value (0, 1)  ",
 					"id" : "obj-3",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -719,7 +722,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[COLD, OPTIONAL] patcher name ",
+					"hint" : "[COLD, OPTIONAL] patcher name ",
 					"id" : "obj-2",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -732,12 +736,13 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[HOT, REQUIRED] EVAL",
+					"hint" : "[HOT, REQUIRED] EVAL",
 					"id" : "obj-1",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 36.0, 56.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -1278,6 +1283,8 @@
 
 			}
  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0,
 		"default_bgcolor" : [ 0.223529, 0.164706, 0.254902, 1.0 ],
 		"color" : [ 0.976471, 0.909804, 0.792157, 1.0 ],
 		"elementcolor" : [ 0.486275, 0.552941, 0.584314, 1.0 ],

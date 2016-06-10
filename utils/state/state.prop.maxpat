@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 124.0, 203.0, 867.0, 740.0 ],
+		"rect" : [ -1228.0, 197.0, 867.0, 740.0 ],
 		"bgcolor" : [ 0.572549, 0.47451, 0.447059, 1.0 ],
 		"editing_bgcolor" : [ 0.572549, 0.47451, 0.447059, 1.0 ],
 		"bglocked" : 0,
@@ -59,7 +59,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 744.0, 361.0, 63.0, 22.0 ],
+					"patching_rect" : [ 744.0, 361.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "#1_state"
 				}
@@ -148,7 +148,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 469.0, 249.0, 111.0, 22.0 ],
+					"patching_rect" : [ 469.0, 249.0, 145.0, 22.0 ],
 					"style" : "",
 					"text" : "state.get #1 #2"
 				}
@@ -174,7 +174,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 49.0, 215.0, 111.0, 22.0 ],
+					"patching_rect" : [ 49.0, 215.0, 145.0, 22.0 ],
 					"style" : "",
 					"text" : "state.get #1 #2"
 				}
@@ -186,7 +186,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 213.0, 438.0, 143.0, 22.0 ],
+					"patching_rect" : [ 213.0, 438.0, 145.0, 22.0 ],
 					"style" : "",
 					"text" : "state.set #1 #2"
 				}
@@ -207,7 +207,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "Message Output",
+					"hint" : "Message Output",
 					"id" : "obj-16",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
@@ -231,7 +232,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "GET output (value only)",
+					"hint" : "GET output (value only)",
 					"id" : "obj-12",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
@@ -295,7 +297,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[HOT, OPTIONAL, Message]",
+					"hint" : "[HOT, OPTIONAL, Message]",
 					"id" : "obj-4",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -308,7 +311,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[COLD, OPTIONAL, SYMBOL] The key to SET",
+					"hint" : "[COLD, OPTIONAL, SYMBOL] The key to SET",
 					"id" : "obj-3",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -321,7 +325,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[HOT, OPTIONAL, ANYTHING] The value to SET",
+					"hint" : "[HOT, OPTIONAL, ANYTHING] The value to SET",
 					"id" : "obj-2",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -334,12 +339,13 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "[HOT, OPTIONAL, SYMBOL / BANG] The key to get or a bang",
+					"hint" : "[HOT, OPTIONAL, SYMBOL / BANG] The key to get or a bang",
 					"id" : "obj-1",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 49.0, 137.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -369,7 +375,7 @@
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 150.5, 489.0, 550.5, 489.0 ],
+					"midpoints" : [ 184.5, 489.0, 550.5, 489.0 ],
 					"source" : [ "obj-18", 1 ]
 				}
 
@@ -547,6 +553,20 @@
 
 			}
  ],
+		"dependency_cache" : [ 			{
+				"name" : "state.set.maxpat",
+				"bootpath" : "~/Documents/GitWorkspace/maxmsp-projects/utils/state",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "state.get.maxpat",
+				"bootpath" : "~/Documents/GitWorkspace/maxmsp-projects/utils/state",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0,
 		"default_bgcolor" : [ 0.223529, 0.164706, 0.254902, 1.0 ],
 		"color" : [ 0.976471, 0.909804, 0.792157, 1.0 ],
 		"elementcolor" : [ 0.486275, 0.552941, 0.584314, 1.0 ],
