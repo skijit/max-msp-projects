@@ -1,0 +1,10 @@
+#N canvas 1 31 850 415 16;
+#X obj 55 261 output;
+#X text 237 15 between: clip values beteween two limits;
+#X obj 54 154 between;
+#X obj 55 79 sinusoid;
+#X text 171 79 signal to clip;
+#X text 204 162 if the incoming value is out of the specified range
+(from 0 to 1 by default) \, force it into the range.;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;

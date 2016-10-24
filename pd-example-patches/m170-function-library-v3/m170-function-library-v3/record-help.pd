@@ -1,0 +1,14 @@
+#N canvas 403 360 844 491 16;
+#X obj 104 241 record;
+#X text 36 19 record: store \, display \, and play back a short duration
+of an audio signal.;
+#X obj 103 123 sinusoid;
+#X obj 104 386 output;
+#X text 231 427 <--- you need to set this to hear the output;
+#X text 223 99 To test \, set the frequency of the sinusoid to 100
+(for example) and press the "rec" button below to make a recording.
+Then choose an output level (80 dB might be god) press "play" to hear
+the recording. (If you're using a built-in laptop speaker and hear
+nothing \, try 1000 Hz. instead of 100.);
+#X connect 0 0 3 0;
+#X connect 2 0 0 0;

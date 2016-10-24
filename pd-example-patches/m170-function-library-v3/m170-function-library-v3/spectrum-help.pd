@@ -1,0 +1,12 @@
+#N struct line-label float x float y float z symbol label;
+#N canvas 272 307 1034 570 16;
+#X declare -path lib;
+#X obj 102 92 sinusoid;
+#X text 257 63 The "at:' control is the starting location in seconds
+to play from (0 for the beginning). "Repeat" loops the playback at
+"Hz" loops per second. The controls at right change the length (in
+seconds) of the recording.;
+#X obj 104 182 spectrum;
+#X text 36 19 spectrum: show the power spectrum of an audio signal.
+;
+#X connect 0 0 2 0;

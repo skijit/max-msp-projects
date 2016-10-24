@@ -1,0 +1,77 @@
+#N canvas 817 253 949 718 10;
+#X obj 54 366 dac~;
+#X obj 66 323 clip~ -1 1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 100 float 3;
+#A 0 0.3 0.295313 0.290625 0.285938 0.28125 0.276563 0.271875 0.267188
+0.2625 0.257813 0.253125 0.248438 0.24375 0.239063 0.234375 0.229688
+0.225 0.220313 0.215625 0.210938 0.20625 0.201563 0.196875 0.192188
+0.1875 0.182813 0.178125 0.173438 0.16875 0.164063 0.159375 0.154688
+0.15 0.145313 0.140625 0.135938 0.13125 0.126563 0.121875 0.117188
+0.1125 0.107813 0.103125 0.0984375 0.09375 0.0890625 0.084375 0.0796875
+0.075 0.0703125 0.065625 0.0609375 0.05625 0.0515625 0.046875 0.0421875
+0.0375 0.0328125 0.028125 0.0234375 0.01875 0.0140625 0.009375 0.0046875
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0;
+#X coords 0 0.3 100 0 200 140 1 0 0;
+#X restore 574 186 graph;
+#X obj 261 330 tabwrite~ array1;
+#X obj 62 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 186 324 print~;
+#X obj 85 268 line~ 0.05 500;
+#X text 3 177;
+#X obj 215 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 31 231 0.3 2;
+#X msg 246 234 0 2;
+#X text 44 154 Ramp UP;
+#X text 198 153 Ramp DOWN;
+#X text 37 -32 This patch graphs the line~ output for ramping up and
+down. It also outputs the line~ audio. Two things of note: -The clicking
+sound is only bc the ramp time so fast (to allow it to fit in the tabwrite~
+window.) -I'm not sure why the audio output is this high freq. Doesn't
+seem like there should be any audible output since the output is just
+0.3 consistently.;
+#X text 536 80 Array / tabwrite~ Notes: -The array properties let you
+specify the size of your buffer (X range). To see each point \, open
+up the 'List View' on the Array Properties. -Tabwrite usually (automatically)
+starts and stops on block size boundaries \, which are typically multiples
+of 64 samples.;
+#X obj 446 362 unpack;
+#X floatatom 446 415 5 0 0 0 - - -;
+#X obj 390 333 fiddle~ 1024 1 20 3;
+#X obj 357 225 osc~ 440;
+#X obj 446 388 mtof;
+#X obj 403 280 *~;
+#X obj 388 180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 502 181 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 468 255 line~;
+#X msg 444 224 0.3 200;
+#X msg 508 223 0 200;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 4 0 9 0;
+#X connect 6 0 1 0;
+#X connect 6 0 5 0;
+#X connect 6 0 3 0;
+#X connect 6 0 17 0;
+#X connect 8 0 10 0;
+#X connect 8 0 5 0;
+#X connect 8 0 3 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 15 0 19 0;
+#X connect 17 2 15 0;
+#X connect 18 0 20 0;
+#X connect 19 0 16 0;
+#X connect 20 0 17 0;
+#X connect 21 0 24 0;
+#X connect 22 0 25 0;
+#X connect 23 0 20 1;
+#X connect 24 0 23 0;
+#X connect 25 0 23 0;

@@ -1,0 +1,8 @@
+#N canvas 408 277 695 304 16;
+#X obj 50 155 output;
+#X obj 51 79 noise;
+#X text 179 160 try 70 or 0 to hear the signal at a reasonable level
+(range is 0 to 100 in decibels)., f 47;
+#X text 36 20 switch: switch a signal on and off;
+#X obj 51 108 switch;
+#X connect 1 0 4 0;

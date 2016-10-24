@@ -1,0 +1,10 @@
+#N canvas 410 279 782 340 16;
+#X obj 146 196 output;
+#X obj 146 80 noise;
+#X obj 229 82 sinusoid;
+#X obj 146 160 multiply;
+#X text 344 127 set this frequency to 1 \, for example.;
+#X text 36 20 multiply: multiply two audio signals;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 0 0;

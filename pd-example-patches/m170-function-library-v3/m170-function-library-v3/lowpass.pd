@@ -1,0 +1,13 @@
+#N canvas 970 317 358 318 16;
+#X floatatom 103 123 7 0 0 1 freq - -, f 7;
+#X obj 24 222 outlet~;
+#X obj 24 48 inlet~;
+#X obj 24 177 lop~;
+#X obj 103 32 loadbang;
+#X msg 103 61 1000;
+#X connect 0 0 3 1;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X coords 0 -1 1 1 125 47 1 100 100;
